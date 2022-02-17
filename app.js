@@ -58,8 +58,11 @@ function displayMenuButtons(menuItem,idBtn) {
 }
 
 const inp = document.querySelector("input");
-
+let id;
 inp.addEventListener("keyup",function(){
+  if(id!==undefined){
+    clearTimeout(id);
+  }
   setTimeout(function(){
     searchProduct(menu,inp.value);
   },1500)
