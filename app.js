@@ -68,7 +68,9 @@ inp.addEventListener("keyup",function(){
   },1500)
   
 })
-
+inp.addEventListener("search",function(){
+  diplayMenuItems(menu);
+})
 function searchProduct(searchItem,inpValue){
   let resultSearch = searchItem.filter(item=>{
     return item.title.indexOf(inpValue) !==-1;
